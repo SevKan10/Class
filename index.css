@@ -502,6 +502,7 @@ input[type="email"]:focus {
     display: block; /* Các thẻ card xếp dọc thay vì nằm ngang */
   }
 }
+
 /* Container của các thẻ card */
 .slider {
     display: flex;
@@ -519,6 +520,7 @@ input[type="email"]:focus {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-sizing: border-box; /* Đảm bảo padding không làm biến dạng kích thước */
   }
   
   /* Hình ảnh bên trong card */
@@ -526,5 +528,19 @@ input[type="email"]:focus {
     width: 100%; /* Đảm bảo hình ảnh tự co giãn */
     height: auto;
     border-radius: 10px;
+    object-fit: cover; /* Giữ tỷ lệ hình ảnh và không bị kéo dài hoặc vỡ hình */
+  }
+  
+  /* Responsive cho điện thoại */
+  @media (max-width: 768px) {
+    .card {
+      flex: 1 1 calc(50% - 20px); /* 2 card trên mỗi hàng */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      flex: 1 1 100%; /* Một card trên mỗi hàng */
+    }
   }
   
