@@ -486,3 +486,19 @@ input[type="email"]:focus {
 }
 
 
+
+@media (max-width: 768px) {
+  .description {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .users-color-container img {
+    width: 80%; /* Tự điều chỉnh kích thước hình ảnh */
+    margin: auto;
+  }
+
+  .card-container {
+    display: block; /* Các thẻ card xếp dọc thay vì nằm ngang */
+  }
+}
