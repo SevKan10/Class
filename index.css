@@ -502,3 +502,29 @@ input[type="email"]:focus {
     display: block; /* Các thẻ card xếp dọc thay vì nằm ngang */
   }
 }
+/* Container của các thẻ card */
+.slider {
+    display: flex;
+    flex-wrap: wrap; /* Đảm bảo xuống dòng nếu không đủ không gian */
+    justify-content: space-around; /* Khoảng cách giữa các card đều nhau */
+    gap: 20px; /* Khoảng cách giữa các card */
+  }
+  
+  /* Card Styling */
+  .card {
+    flex: 1 1 calc(25% - 20px); /* Tự co giãn để vừa 4 card trên hàng */
+    max-width: 300px; /* Giới hạn kích thước card */
+    background: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Hình ảnh bên trong card */
+  .card img {
+    width: 100%; /* Đảm bảo hình ảnh tự co giãn */
+    height: auto;
+    border-radius: 10px;
+  }
+  
